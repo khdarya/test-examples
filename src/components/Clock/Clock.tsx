@@ -11,15 +11,15 @@ type PropsType = {
 export const Clock: React.FC<PropsType> = (props) => {
     const [date, setDate] = useState(new Date())
 
-  useEffect(() => {
+    useEffect(() => {
 
-      const intervalID = setInterval(() => {
+        const intervalID = setInterval(() => {
             setDate(new Date());
         }, 1000);
 
-    return () => {
-        clearInterval(intervalID)
-    }
+        return () => {
+            clearInterval(intervalID)
+        }
     }, [])
 
     let view;
